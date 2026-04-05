@@ -1,4 +1,5 @@
 import random
+import sys
 
 #FUNÇÕES BÁSICAS  
 def fromCodeToMap(codigo):
@@ -180,4 +181,14 @@ def main():
         caminhadaAleatoria(ilha)
         caminhadaGulosa(ilha)
 
-main()
+if __name__ == "__main__":
+    if len(sys.argv) > 1:
+        codigo = sys.argv[1]
+        ilha = fromCodeToMap(codigo)
+        print("=== EXECUÇÃO AUTOMÁTICA ===")
+        printMap(ilha)
+        caminhadaFixa(ilha)
+        caminhadaAleatoria(ilha)
+        caminhadaGulosa(ilha)
+    else:
+        main()

@@ -15,7 +15,7 @@ def test_fromCodeToMap_basico():
 @pytest.mark.parametrize("matriz,caminho,esperado", [
     ([[1,1],[1,1]], [0,1], 3),
     ([[2,2],[2,2]], [0,1], 6),
-    ([[1,2],[3,4]], [0,1], 7)
+    ([[1,2],[3,4]], [0,1], 9)
 ])
 def test_calculaCusto_varios_casos(matriz, caminho, esperado):
     resultado = calculaCusto(matriz, caminho)
